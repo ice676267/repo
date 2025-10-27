@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <title>บันทึกประจำวัน</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>สวัสดี {{ username }}</h2>
+    <div class="top-links">
+      <a href="/history">ดูประวัติย้อนหลัง</a> |
+      <a href="/logout">ออกจากระบบ</a>
+    </div>
+
+    <form method="POST" action="/add">
+      <textarea name="note" placeholder="เขียนบันทึกของคุณที่นี่..." required></textarea><br>
+      <button type="submit">บันทึก</button>
+    </form>
+
+    <h3>บันทึกล่าสุด</h3>
+    {% if notes %}
+      <div class="recent">
+        {% for note in notes[-3:]|reverse %}
+          <div class="note-box">
+            <p>{{ note }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>ยังไม่มีบันทึก</p>
+    {% endif %}
+  </div>
+</body>
+</html>

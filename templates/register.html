@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <title>สมัครสมาชิก</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-box">
+    <h2>สมัครสมาชิก</h2>
+    {% if error %}<p class="error">{{ error }}</p>{% endif %}
+    <form method="POST" action="/register">
+      <input type="text" name="username" placeholder="ชื่อผู้ใช้ใหม่" required><br>
+      <input type="password" name="password" placeholder="รหัสผ่าน" required><br>
+      <input type="password" name="confirm" placeholder="ยืนยันรหัสผ่าน" required><br>
+      <button type="submit">สมัครสมาชิก</button>
+    </form>
+    <p>มีบัญชีแล้ว? <a href="/login">เข้าสู่ระบบ</a></p>
+  </div>
+</body>
+</html>

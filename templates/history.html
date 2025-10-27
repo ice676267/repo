@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <title>ประวัติการบันทึก</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>ประวัติการบันทึกของ {{ username }}</h2>
+    <div class="top-links">
+      <a href="/">กลับหน้าเขียนบันทึก</a> |
+      <a href="/logout">ออกจากระบบ</a>
+    </div>
+
+    <div class="note-history">
+      {% for note in notes %}
+        <div class="note-box">
+          <p>{{ note }}</p>
+          <a class="delete-link" href="/delete/{{ loop.index0 }}" onclick="return confirm('ต้องการลบบันทึกนี้หรือไม่?');">ลบ</a>
+        </div>
+      {% else %}
+        <p>ยังไม่มีบันทึก</p>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+</html>
