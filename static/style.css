@@ -1,0 +1,86 @@
+/* พื้นฐาน */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Prompt', sans-serif;
+  color: #fff;
+  background: url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=80") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* กล่องกลาง */
+.container, .login-box {
+  width: 100%;
+  max-width: 720px;
+  background: rgba(0,0,0,0.5);
+  padding: 24px;
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+/* ฟอร์ม */
+textarea {
+  width: 100%;
+  min-height: 180px;
+  border-radius: 12px;
+  padding: 14px;
+  margin-top: 12px;
+  border: none;
+  resize: vertical;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+button {
+  padding: 10px 18px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.note-box { 
+  background: rgba(255,255,255,0.06);
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 12px;
+  text-align: left;
+  color: #fff;
+}
+.note-box p {
+  white-space: pre-line;
+}
+/* ลิงก์ */
+a {
+  color: #ffd966;
+  text-decoration: none;
+}
+
+.top-links {
+  margin-bottom: 12px;
+}
+
+/* ข้อความ error */
+.error {
+  color: #ff8a8a;
+  margin-bottom: 8px;
+}
